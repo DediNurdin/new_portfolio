@@ -31,10 +31,10 @@ class ProjectsView extends StatelessWidget {
                   extraLargeScreen: ProjectGrid(
                     crossAxisCount: 4,
                   ),
-                  largeMobile: ProjectGrid(crossAxisCount: 1, ratio: 1.8),
-                  mobile: ProjectGrid(crossAxisCount: 1, ratio: 0.5),
+                  largeMobile: ProjectGrid(crossAxisCount: 1, ratio: 0.7),
+                  mobile: ProjectGrid(crossAxisCount: 1, ratio: 0.6),
                   tablet: ProjectGrid(
-                    ratio: 1.4,
+                    ratio: 0.7,
                     crossAxisCount: 2,
                   )))
         ],
