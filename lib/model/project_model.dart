@@ -26,7 +26,7 @@ List<Project> projectList = [
       'https://github.com/Hamad-Anwar/Neumorphic-Analog-Clockify'),
   Project(
       'SIKAP Mobile',
-      'Building the "ATTITUDE Mobile" Application, as part of the Adhiguna Putera Port Information System Application development team',
+      'Building the "SIKAP Mobile" Application, as part of the Adhiguna Putera Port Information System Application development team',
       'assets/images/sikap_mobile.png',
       'https://github.com/Hamad-Anwar/'),
   Project(
