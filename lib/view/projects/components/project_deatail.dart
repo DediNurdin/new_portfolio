@@ -4,9 +4,15 @@ import '../../../model/project_model.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
-class ProjectDetail extends StatelessWidget {
+class ProjectDetail extends StatefulWidget {
   final int index;
   const ProjectDetail({super.key, required this.index});
+
+  @override
+  State<ProjectDetail> createState() => _ProjectDetailState();
+}
+
+class _ProjectDetailState extends State<ProjectDetail> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
@@ -16,7 +22,7 @@ class ProjectDetail extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: Text(
-            projectList[index].name,
+            projectList[widget.index].name,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall!
@@ -33,7 +39,7 @@ class ProjectDetail extends StatelessWidget {
                 height: defaultPadding,
               ),
         Text(
-          projectList[index].description,
+          projectList[widget.index].description,
           style: const TextStyle(color: Colors.grey, height: 1.5),
           maxLines: size.width > 700 && size.width < 750
               ? 3
@@ -48,7 +54,7 @@ class ProjectDetail extends StatelessWidget {
         ),
         Expanded(
           child: Image.asset(
-            projectList[index].image,
+            projectList[widget.index].image,
           ),
         ),
       ],
