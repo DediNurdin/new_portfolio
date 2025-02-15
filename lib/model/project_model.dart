@@ -27,7 +27,7 @@ List<Project> projectList = [
   Project(
       'SIKAP Mobile',
       'Building the "SIKAP Mobile" Application, as part of the Adhiguna Putera Port Information System Application development team',
-      'assets/images/sikap_mobile.png',
+      'https://dedinurdin.netlify.app/assets/images/sikap_mobile.png',
       'https://github.com/Hamad-Anwar/'),
   Project(
       'myAksi',

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/project_model.dart';
@@ -55,6 +56,29 @@ class _ProjectDetailState extends State<ProjectDetail> {
         Expanded(
           child: Image.network(
             projectList[widget.index].image,
+            errorBuilder: (context, error, stackTrace) {
+              return const Icon(
+                CupertinoIcons.photo,
+                size: 40,
+                color: Colors.greenAccent,
+              );
+            },
+            loadingBuilder: (BuildContext context, Widget child,
+                ImageChunkEvent? loadingProgress) {
+              if (loadingProgress == null) {
+                return child;
+              }
+              return Center(
+                child: CircularProgressIndicator(
+                  color: Colors.greenAccent,
+                  strokeWidth: 1.5,
+                  value: loadingProgress.expectedTotalBytes != null
+                      ? loadingProgress.cumulativeBytesLoaded /
+                          loadingProgress.expectedTotalBytes!
+                      : null,
+                ),
+              );
+            },
           ),
         ),
       ],
