@@ -21,7 +21,7 @@ class ImageViewer {
                   body: Container(
                     color: Colors.white,
                     child: Center(
-                        child: PhotoView(imageProvider: AssetImage(image))),
+                        child: PhotoView(imageProvider: NetworkImage(image))),
                   )),
             ),
           ),

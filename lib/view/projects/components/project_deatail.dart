@@ -53,7 +53,7 @@ class _ProjectDetailState extends State<ProjectDetail> {
           overflow: TextOverflow.ellipsis,
         ),
         Expanded(
-          child: Image.asset(
+          child: Image.network(
             projectList[widget.index].image,
           ),
         ),
