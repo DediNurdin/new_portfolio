@@ -56,6 +56,7 @@ class _ProjectDetailState extends State<ProjectDetail> {
         Expanded(
           child: Image.network(
             projectList[widget.index].image,
+            headers: {"Access-Control-Allow-Origin": "*"},
             errorBuilder: (context, error, stackTrace) {
               return const Icon(
                 CupertinoIcons.photo,
