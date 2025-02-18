@@ -56,8 +56,6 @@ class _ProjectDetailState extends State<ProjectDetail> {
         Expanded(
           child: CachedNetworkImage(
             imageUrl: projectList[widget.index].image,
-            progressIndicatorBuilder: (context, url, downloadProgress) =>
-                CircularProgressIndicator(value: downloadProgress.progress),
             errorWidget: (context, url, error) => Icon(
               Icons.error,
               color: Colors.greenAccent,
