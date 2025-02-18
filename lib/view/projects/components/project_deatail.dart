@@ -54,9 +54,9 @@ class _ProjectDetailState extends State<ProjectDetail> {
           overflow: TextOverflow.ellipsis,
         ),
         Expanded(
-          child: CachedNetworkImage(
-            imageUrl: projectList[widget.index].image,
-            errorWidget: (context, url, error) => Icon(
+          child: Image.network(
+            projectList[widget.index].image,
+            errorBuilder: (context, error, stackTrace) => const Icon(
               Icons.error,
               color: Colors.greenAccent,
             ),
